@@ -1,9 +1,9 @@
 #! /bin/sh
 # Configure your paths and filenames
 SOURCEBINPATH=.
-SOURCEBIN=apt-git
+SOURCEBIN=sinit
 SOURCEDOC=README.md
-DEBFOLDER=apt-now
+DEBFOLDER=sinit
 DEBVERSION=$(date +%Y%m%d)
 CONTROL_FILE="Source: sinit
 Section: admin
@@ -17,8 +17,10 @@ Vcs-Browser: http://git.suckless.org/sinit
 
 Package: sinit
 Architecture: all
-Depends: ${misc:Depends}
-Description: A minimal init system, without the suck.
+Depends: \${misc:Depends}
+Description: sinit is a suckless init, initially based on Rich Felker’s minimal init.
+
+sinit is considered complete and no further development is expected to happen.
  .
  
  "
