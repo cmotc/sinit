@@ -5,7 +5,8 @@ VERSION = 1.0
 PREFIX = /usr/
 MANPREFIX = $(PREFIX)/share/man
 
-CC = cc
+#CC = cc
+CC = arm-linux-gnueabihf-gcc
 LD = $(CC)
 CPPFLAGS =
 CFLAGS   = -Wextra -Wall -Os
