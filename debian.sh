@@ -19,8 +19,9 @@ Package: sinit
 Architecture: all
 Depends: \${misc:Depends}
 Description: sinit is a suckless init, initially based on Rich Felker’s minimal init.
+ sinit is considered complete and no further development is expected to happen. This
+ sinit is awesome.
  .
- sinit is considered complete and no further development is expected to happen.
  "
 DEBFOLDERNAME="../$DEBFOLDER-$DEBVERSION"
 
