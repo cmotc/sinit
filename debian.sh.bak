@@ -4,7 +4,7 @@ SOURCEBINPATH=.
 SOURCEBIN=sinit
 SOURCEDOC=README.md
 DEBFOLDER=sinit
-DEBVERSION=$(date +%Y%m%d)1
+DEBVERSION=$(date +%Y%m%d)
 CONTROL_FILE="Source: sinit
 Section: admin
 Priority: optional
@@ -19,8 +19,9 @@ Package: sinit
 Architecture: all
 Depends: \${misc:Depends}
 Description: sinit is a suckless init, initially based on Rich Felker’s minimal init.
+ sinit is considered complete and no further development is expected to happen. This
+ sinit is awesome.
  .
- sinit is considered complete and no further development is expected to happen.
  "
 DEBFOLDERNAME="../$DEBFOLDER-$DEBVERSION"
 
@@ -33,7 +34,7 @@ cp $SOURCEBINPATH/ $DEBFOLDERNAME -r
 cd $DEBFOLDERNAME
 
 # Create the packaging skeleton (debian/*)
-dh_make -s --indep --createorig
+dh_make --indep --createorig
 echo "$CONTROL_FILE" > debian/control
 
 # Remove make calls
@@ -50,4 +51,4 @@ rm debian/*.ex
 
 # Build the package.
 # You  will get a lot of warnings and ../somescripts_0.1-1_i386.deb
-debuild -us -uc #> ../log
+debuild -us -uc > ../log

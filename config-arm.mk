@@ -11,4 +11,4 @@ CC = $(CROSS_COMPILE)$(GCC)
 LD = $(CROSS_COMPILE)$(GCC)
 CPPFLAGS =
 CFLAGS   = -Wextra -Wall -Os
-LDFLAGS  = -s -static
+LDFLAGS  = -static
